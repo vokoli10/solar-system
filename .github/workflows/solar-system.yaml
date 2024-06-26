@@ -8,9 +8,7 @@ on:
       - 'feature/*'
     
 env:
-    MONFO_URI: 'mongodb+srv://superuser:${{ secrets.MONGO_PASSWORD }}@cluster.f6fyb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster'
-    MONGO_USERNAME: ${{ vars.MONGO_USERNAME }}
-    MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }} 
+    MONGO_URI: ${{ vars.MONGO_URI }}
 
 jobs:
   unit-testing:
