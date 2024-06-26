@@ -8,10 +8,10 @@ on:
       - 'feature/*'
     
 env:
-    DEBUG_MODE: true
-    MONGO_URI: 'mongodb+srv://superuser:superpassword@cluster.f6fyb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster'
-    MONGO_USERNAME: ${{ vars.MONGO_USERNAME }}
-    MONGO_USERPASSWORD: ${{ secrets.MONGO_PASSWORD }}
+  DEBUG_MODE: true
+  MONGO_URI: 'mongodb+srv://superuser:superpassword@cluster.f6fyb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster'
+  MONGO_USERNAME: ${{ secrets.MONGO_USERNAME }}  # Use secrets for sensitive information
+  MONGO_PASSWORD: ${{ vars.MONGO_PASSWORD }}  # Use secrets for sensitive information
 
 jobs:
   unit-testing:
