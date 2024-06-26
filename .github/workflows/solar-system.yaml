@@ -8,6 +8,7 @@ on:
       - 'feature/*'
     
 env:
+    DEBUG_MODE: true
     MONGO_URI: ${{ vars.MONGO_URI }}
 
 jobs:
@@ -28,4 +29,3 @@ jobs:
 
       - name: Run Unit Tests
         run: npm test
-        
