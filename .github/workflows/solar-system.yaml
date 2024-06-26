@@ -9,7 +9,9 @@ on:
     
 env:
     DEBUG_MODE: true
-    MONGO_URI: ${{ vars.MONGO_URI }}
+    MONGO_URI: 'mongodb+srv://superuser:superpassword@cluster.f6fyb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster'
+    MONGO_USERNAME: ${{ vars.MONGO_USERNAME }}
+    MONGO_USERPASSWORD: ${{ secrets.MONGO_PASSWORD }}
 
 jobs:
   unit-testing:
